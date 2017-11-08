@@ -112,17 +112,31 @@ function changer(toog,ap,aa,an){
   if(aaa<1)aaa=1;
   if(ppp<1)ppp=1;
   papapa = ppp*aaa;
+  if(papapa==1){
+     document.getElementById(aa).value = 0;
+     document.getElementById(ap).value = 0;
+  }
   switch (toog){
     case 0: 
       let b;
+      if(get(ap)>65355) document.getElementById(ap).value=65355;
       b=papapa/(get(ap)<1?1:get(ap));
+      if(b>65355) {
+      	b=65355;
+      	document.getElementById(ap).value = Math.round(papapa/b);
+      }
       document.getElementById(aa).value = Math.round(b);
       ppp=Math.round(get(ap));
       aaa=Math.round(b);
       break;
     case 1:
       let a;
+      if(get(aa)>65355) document.getElementById(aa).value=65355;
       a=papapa/(get(aa)<1?1:get(aa));
+      if(a>65355) {
+      	a=65355;
+      	document.getElementById(aa).value = Math.round(papapa/a);
+      }
       document.getElementById(ap).value = Math.round(a);
       ppp=Math.round(a);
       aaa=Math.round(get(aa));
@@ -132,6 +146,10 @@ function changer(toog,ap,aa,an){
       case 0:pre1=ppp;arr1=aaa;break;
       case 1:pre2=ppp;arr2=aaa;break;
       case 2:pre3=ppp;arr3=aaa;break;
+    }
+  if(papapa==1){
+     document.getElementById(aa).value = 0;
+     document.getElementById(ap).value = 0;
     }
 }
 //Вывод текста (в случае вывода в одну строку обурнуть текст в <pre></pre>
