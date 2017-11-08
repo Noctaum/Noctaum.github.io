@@ -138,14 +138,16 @@ function changer(toog,ap,aa,an){
       aaa=Math.round(get(aa));
       break;
   }
+  if(papapa==1){
+     document.getElementById(aa).value = 0;
+     document.getElementById(ap).value = 0;
+     ppp=1;
+     aaa=1;
+  }
   switch (an){
       case 0:pre1=ppp;arr1=aaa;break;
       case 1:pre2=ppp;arr2=aaa;break;
       case 2:pre3=ppp;arr3=aaa;break;
-    }
-  if(papapa==1){
-     document.getElementById(aa).value = 0;
-     document.getElementById(ap).value = 0;
     }
 }
 //Вывод текста (в случае вывода в одну строку обурнуть текст в <pre></pre>
