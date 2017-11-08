@@ -112,10 +112,6 @@ function changer(toog,ap,aa,an){
   if(aaa<1)aaa=1;
   if(ppp<1)ppp=1;
   papapa = ppp*aaa;
-  if(papapa==1){
-     document.getElementById(aa).value = 0;
-     document.getElementById(ap).value = 0;
-  }
   switch (toog){
     case 0: 
       let b;
