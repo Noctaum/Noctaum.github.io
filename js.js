@@ -156,7 +156,7 @@ function scribbler(){
   let a,b,c;
   if(checkTimer(1)==84) a = "APB1";
   else a = "APB2";
-  b = document.getElementById('timer').value;
+  b = get('timer');
   switch (b){
     case 1: c = "TIM1_UP_TIM10"; break;
     case 2: c = "TIM2"; break;
