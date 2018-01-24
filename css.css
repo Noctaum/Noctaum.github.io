@@ -1,0 +1,24 @@
+#map {
+    width: 1000px;
+    height: 630px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.game, #info{
+	margin-top: 20px;
+	text-align: center;
+}
+
+#but{
+	width: 200px;
+}
+
+#human, #machin{
+	text-align: left;
+}
+
+label{
+	margin-top: 20px;
+}
+
