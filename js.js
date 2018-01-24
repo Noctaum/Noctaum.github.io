@@ -162,9 +162,9 @@ function startRecognizer(){
 
       recognition.onresult = function (event) {
         var result = event.results[event.resultIndex];
-          //console.clear();
+          console.clear();
           console.log(result[0].transcript);
-       console.log("Распознование");
+          document.getElementById("ve").value = result[0].transcript;
        
       };
 
