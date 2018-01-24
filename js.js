@@ -153,17 +153,19 @@
  
 // }
 
-$('#speach').on("click", startRecognizer);
+// $('#speach').on("click", startRecognizer);
 
-function startRecognizer(){
+// function startRecognizer(){
     if ('webkitSpeechRecognition' in window) {
       var recognition = new webkitSpeechRecognition();
       recognition.lang = 'ru';
 
       recognition.onresult = function (event) {
         var result = event.results[event.resultIndex];
-          console.clear();
+          //console.clear();
           console.log(result[0].transcript);
+       console.log("Распознование");
+       
       };
 
       recognition.onend = function() {
@@ -172,7 +174,7 @@ function startRecognizer(){
 
       recognition.start();
     } else alert('webkitSpeechRecognition не поддерживается :(')
-  }
+//  }
 
 
 // //  function startRecognizer(){
