@@ -153,9 +153,9 @@
  
 // }
 
-// $('#speach').on("click", startRecognizer);
+ $('#speach').on("click", startRecognizer);
 
-// function startRecognizer(){
+function startRecognizer(){
     if ('webkitSpeechRecognition' in window) {
       var recognition = new webkitSpeechRecognition();
       recognition.lang = 'ru';
@@ -174,7 +174,7 @@
 
       recognition.start();
     } else alert('webkitSpeechRecognition не поддерживается :(')
-//  }
+  }
 
 
 // //  function startRecognizer(){
