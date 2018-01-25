@@ -118,7 +118,9 @@ function getWordForMachin(a){
 			}
 		}
 	}
-	alert("Кажеться я проиграл, моё признание!");
+	alert("Кажеться я проиграл, моё почтение!");
+   	$("#info").empty();
+    	$("#info").append("<h3>Счёт "+cityHuman.length+" : "+cityMachine.length+"</h3>");
 	return 0;
 }
 
